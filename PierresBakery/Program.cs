@@ -1,4 +1,3 @@
-//USING DIRECTIVES HERE
 using PierresBakery.Models;
 using System;
 
@@ -35,7 +34,7 @@ namespace PierresBakery
       Console.ForegroundColor = ConsoleColor.White;
       string continueOn = Console.ReadLine();
 
-      if (continueOn.ToLower() == "yes")
+      if (continueOn.ToLower() == "yes") //take order if yes
       {
         Console.ForegroundColor = ConsoleColor.Black;
         Console.WriteLine("How many loaves of bread would you like? (enter a number)");
@@ -53,48 +52,56 @@ namespace PierresBakery
 
         int breadOrder;
         int pastryOrder;
-
         bool breadOrderValue = int.TryParse(breadOrderString, out breadOrder);
         bool pastryOrderValue = int.TryParse(pastryOrderString, out pastryOrder);
 
-        if (breadOrderValue && pastryOrderValue)
+        if (breadOrderValue && pastryOrderValue) //finish out order if valid entry
         {
           TotalCost newOrder = new TotalCost(breadOrder, pastryOrder);
           int totalCost = newOrder.GetTotalCost();
-          Console.WriteLine("==================================================================");
+          Console.ForegroundColor = ConsoleColor.DarkRed;
+          Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~**~*~*~**~*~*~*~*~*~*~*");
+          Console.ForegroundColor = ConsoleColor.Black;
           Console.WriteLine($"Thank you {customerName}!");
+          Console.ForegroundColor = ConsoleColor.DarkMagenta;
           Console.WriteLine($"Your order comes out to be ${totalCost}.");
+          Console.ForegroundColor = ConsoleColor.Black;
           Console.WriteLine($"Enjoy!");
-          Console.WriteLine("==================================================================");
+          Console.ForegroundColor = ConsoleColor.DarkRed;
+          Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~**~*~*~**~*~*~*~*~*~*~*");
+          Console.ForegroundColor = ConsoleColor.Black;
         }
-        else
+        else //deal with invalid order value
         {
-          Console.BackgroundColor = ConsoleColor.DarkMagenta;
-          Console.WriteLine("==================================================================");
-          Console.WriteLine("Please enter a numerical values such as '1'");
-          Console.WriteLine("rather than 'one' or '1.0' for each of your orders");
-          Console.WriteLine("==================================================================");
+        Console.ForegroundColor = ConsoleColor.DarkRed;
+          Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~**~*~*~**~*~*~*~*~*~*~*");
+          Console.ForegroundColor = ConsoleColor.DarkMagenta;          
+          Console.WriteLine("Please enter numerical values such as '1',");
+          Console.WriteLine("rather than 'one' or '1.0' for your orders");
+        Console.ForegroundColor = ConsoleColor.DarkRed;
+          Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~**~*~*~**~*~*~*~*~*~*~*");
+          Console.ForegroundColor = ConsoleColor.Black;          
           Console.WriteLine("Type 'yes' to continue, or any other key to exit");
           Console.ForegroundColor = ConsoleColor.White;
           string restart = Console.ReadLine();
-
           if (restart.ToLower() == "yes")
           {
             Main();
           }
-          else
+          else //leave the store after failed order
           {
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Console.WriteLine("Thanks for stopping by, we hope to see you again!");
           }
         }
       }
-      else
+      else //leave the store without ordering
       {
+        Console.ForegroundColor = ConsoleColor.DarkMagenta;
         Console.WriteLine("Thanks for stopping by, we hope to see you again!");
       }
       Console.ForegroundColor = ConsoleColor.White;
       Console.BackgroundColor = ConsoleColor.Black;
-
     }
   }
 }
