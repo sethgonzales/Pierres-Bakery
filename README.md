@@ -1,8 +1,8 @@
-# Pierre's Backery
+# Pierre's Bakery
 
 #### By _Seth Gonzales_
 
-#### _A console application that takes a word and returns the Scrabble score for that word._
+#### _A console application to take bread and pastry orders for Pierre's Bakery_
 
 ## Technologies Used
 
