@@ -37,8 +37,8 @@ namespace PierresBakery.Tests
       //assert
       Assert.AreEqual(expectedCost, actuallCost);
     }
-      [TestMethod]
-    public void GetBreadCost_ReturnPriceOfThreeBreadLoaves_Int()
+      [TestMethod] //additional test to see if cost is the same as two loaves of bread
+    public void GetBreadCost_ReturnPriceOfThreeBreadLoaves_Int() 
     {
       //arrange 
       int expectedCost = 10;

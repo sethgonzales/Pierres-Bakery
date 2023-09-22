@@ -48,5 +48,17 @@ namespace PierresBakery.Tests
       //assert
       Assert.AreEqual(expectedCost, actuallCost);
     }
+   [TestMethod] //additional test to see if cost is same as three pastries 
+   public void GetPastryCost_ReturnPriceOfFourPastries_Int()
+    {
+      //arrange 
+      int expectedCost = 6;
+      PastryOrder newPastryOrder = new PastryOrder(4);
+      //act
+      int actuallCost = newPastryOrder.GetPastryCost();
+      //assert
+      Assert.AreEqual(expectedCost, actuallCost);
+    }
+
   }
 }
