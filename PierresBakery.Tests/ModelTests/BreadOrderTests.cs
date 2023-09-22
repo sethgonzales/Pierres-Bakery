@@ -1,6 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierresBakery.Models;
-using System;
 
 namespace PierresBakery.Tests
 {
@@ -15,6 +14,7 @@ namespace PierresBakery.Tests
       //assert
       Assert.AreEqual(typeof(BreadOrder), newBreadOrder.GetType());
     }
+
     [TestMethod]
     public void GetBreadCost_ReturnPriceOfSingleBreadLoaf_Int()
     {
@@ -26,6 +26,7 @@ namespace PierresBakery.Tests
       //assert
       Assert.AreEqual(expectedCost, actuallCost);
     }
+
     [TestMethod]
     public void GetBreadCost_ReturnPriceOfTwoBreadLoaves_Int()
     {
@@ -37,8 +38,9 @@ namespace PierresBakery.Tests
       //assert
       Assert.AreEqual(expectedCost, actuallCost);
     }
-      [TestMethod] //additional test to see if cost is the same as two loaves of bread
-    public void GetBreadCost_ReturnPriceOfThreeBreadLoaves_Int() 
+
+    [TestMethod] //additional test to see if cost is the same as two loaves of bread
+    public void GetBreadCost_ReturnPriceOfThreeBreadLoaves_Int()
     {
       //arrange 
       int expectedCost = 10;
