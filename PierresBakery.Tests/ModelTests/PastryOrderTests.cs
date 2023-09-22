@@ -22,31 +22,31 @@ namespace PierresBakery.Tests
       int expectedCost = 2;
       PastryOrder newPastryOrder = new PastryOrder(1);
       //act
-      int theoreticalCost = newPastryOrder.GetPastryCost();
+      int actuallCost = newPastryOrder.GetPastryCost();
       //assert
-      Assert.AreEqual(expectedCost, theoreticalCost);
+      Assert.AreEqual(expectedCost, actuallCost);
     }
-  //   [TestMethod]
-  //   public void GetBreadCost_ReturnPriceOfTwoBreadLoaves_Int()
-  //   {
-  //     //arrange 
-  //     int expectedCost = 10;
-  //     BreadOrder newBreadOrder = new BreadOrder(2);
-  //     //act
-  //     int theoreticalCost = newBreadOrder.GetBreadCost();
-  //     //assert
-  //     Assert.AreEqual(expectedCost, theoreticalCost);
-  //   }
-  //     [TestMethod]
-  //   public void GetBreadCost_ReturnPriceOfThreeBreadLoaves_Int()
-  //   {
-  //     //arrange 
-  //     int expectedCost = 10;
-  //     BreadOrder newBreadOrder = new BreadOrder(3);
-  //     //act
-  //     int theoreticalCost = newBreadOrder.GetBreadCost();
-  //     //assert
-  //     Assert.AreEqual(expectedCost, theoreticalCost);
-  //   }
+    [TestMethod]
+    public void GetPastryCost_ReturnPriceOfTwoPastries_Int()
+    {
+      //arrange 
+      int expectedCost = 10;
+      PastryOrder newPastryOrder = new PastryOrder(2);
+      //act
+      int actuallCost = newPastryOrder.GetPastryCost();
+      //assert
+      Assert.AreEqual(expectedCost, actuallCost);
+    }
+    //     [TestMethod]
+    //   public void GetBreadCost_ReturnPriceOfThreeBreadLoaves_Int()
+    //   {
+    //     //arrange 
+    //     int expectedCost = 10;
+    //     BreadOrder newBreadOrder = new BreadOrder(3);
+    //     //act
+    //     int theoreticalCost = newBreadOrder.GetBreadCost();
+    //     //assert
+    //     Assert.AreEqual(expectedCost, theoreticalCost);
+    //   }
   }
 }

@@ -22,9 +22,9 @@ namespace PierresBakery.Tests
       int expectedCost = 5;
       BreadOrder newBreadOrder = new BreadOrder(1);
       //act
-      int theoreticalCost = newBreadOrder.GetBreadCost();
+      int actuallCost = newBreadOrder.GetBreadCost();
       //assert
-      Assert.AreEqual(expectedCost, theoreticalCost);
+      Assert.AreEqual(expectedCost, actuallCost);
     }
     [TestMethod]
     public void GetBreadCost_ReturnPriceOfTwoBreadLoaves_Int()
@@ -33,9 +33,9 @@ namespace PierresBakery.Tests
       int expectedCost = 10;
       BreadOrder newBreadOrder = new BreadOrder(2);
       //act
-      int theoreticalCost = newBreadOrder.GetBreadCost();
+      int actuallCost = newBreadOrder.GetBreadCost();
       //assert
-      Assert.AreEqual(expectedCost, theoreticalCost);
+      Assert.AreEqual(expectedCost, actuallCost);
     }
       [TestMethod]
     public void GetBreadCost_ReturnPriceOfThreeBreadLoaves_Int()
@@ -44,9 +44,9 @@ namespace PierresBakery.Tests
       int expectedCost = 10;
       BreadOrder newBreadOrder = new BreadOrder(3);
       //act
-      int theoreticalCost = newBreadOrder.GetBreadCost();
+      int actuallCost = newBreadOrder.GetBreadCost();
       //assert
-      Assert.AreEqual(expectedCost, theoreticalCost);
+      Assert.AreEqual(expectedCost, actuallCost);
     }
   }
 }
