@@ -12,6 +12,7 @@
 
 ## Description
 
+This console application takes orders for pastry and bread for new customers. The application begins with a welcome screen, showing the customer the menu and deals of the day. If the customer decides to continue, they numerically enter their order. Once finished, the total cost is calculated and revealed. 
 
 
 ## Setup/Installation Requirements
