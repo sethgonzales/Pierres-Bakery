@@ -23,7 +23,8 @@ This console application takes orders for pastry and bread for new customers. Th
    * To compile the console app without running it, use the following command: `$ dotnet build`.
 * Interact with each of the prompts to enter the shop and place an order. If you make a mistake, or would like to leave, follow the 'input error' or 'continuation' prompts as needed.
 * To test the business logic, navigate to test directory, `PierresBakery.Tests`.
-* In the command line, run the command `$ dotnet test` to execute the tests.
+   * In the command line, run the command `$ dotnet restore` to install any testing files.
+   * In the command line, run the command `$ dotnet test` to execute the tests.
 
 ## Known Bugs
 
