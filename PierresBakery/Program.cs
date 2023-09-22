@@ -16,23 +16,23 @@ namespace PierresBakery
       Console.WriteLine("How many pastries would you like? (enter a number)");
       string pastryOrderString = Console.ReadLine();
 
-      int breadOrder = int.Parse(breadOrderString);
-      int pastryOrder = int.Parse(breadOrderString);
-      TotalCost newOrder = new TotalCost(breadOrder, pastryOrder); 
-      int totalCost = newOrder.GetTotalCost();
-      
-      Console.WriteLine("=================================================");
-      Console.WriteLine($"Your order comes out to be ${totalCost}.");
-      Console.WriteLine("=================================================");
+      bool breadOrderValue = int.TryParse(breadOrderString);
+      bool pastryOrderValue = int.TryParse(pastryOrderString);
 
-      // if (totalCost)
-      // {
-
-      // }
-      // else
-      // {
-      //   Console.WriteLine("Please enter a numerical value such as '1' rather than 'one' or '1.0'");
-      // }
+      if (breadOrderValue && pastryOrderValue)
+      {
+        int breadOrder = int.Parse(breadOrderString);
+        int pastryOrder = int.Parse(breadOrderString);
+        TotalCost newOrder = new TotalCost(breadOrder, pastryOrder);
+        int totalCost = newOrder.GetTotalCost();
+        Console.WriteLine("=================================================");
+        Console.WriteLine($"Your order comes out to be ${totalCost}.");
+        Console.WriteLine("=================================================");
+      }
+      else
+      {
+        Console.WriteLine("Please enter a numerical value such as '1' rather than 'one' or '1.0' for each of your orders");
+      }
 
     }
 
