@@ -15,17 +15,17 @@ namespace PierresBakery.Tests
       //assert
       Assert.AreEqual(typeof(PastryOrder), newPastryOrder.GetType());
     }
-  //   [TestMethod]
-  //   public void GetBreadCost_ReturnPriceOfSingleBreadLoaf_Int()
-  //   {
-  //     //arrange 
-  //     int expectedCost = 5;
-  //     BreadOrder newBreadOrder = new BreadOrder(1);
-  //     //act
-  //     int theoreticalCost = newBreadOrder.GetBreadCost();
-  //     //assert
-  //     Assert.AreEqual(expectedCost, theoreticalCost);
-  //   }
+    [TestMethod]
+    public void GetPastryCost_ReturnPriceOfSinglePastry_Int()
+    {
+      //arrange 
+      int expectedCost = 2;
+      PastryOrder newPastryOrder = new PastryOrder(1);
+      //act
+      int theoreticalCost = newPastryOrder.GetPastryCost();
+      //assert
+      Assert.AreEqual(expectedCost, theoreticalCost);
+    }
   //   [TestMethod]
   //   public void GetBreadCost_ReturnPriceOfTwoBreadLoaves_Int()
   //   {
