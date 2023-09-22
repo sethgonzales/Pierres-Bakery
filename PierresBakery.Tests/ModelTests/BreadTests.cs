@@ -1,17 +1,16 @@
-// using Microsoft.VisualStudio.TestTools.UnitTesting;
-// using ScrabbleScorer.Models;
-// using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PierresBakery.Models;
+using System;
 
-// namespace PierresBakery.Tests
-// {
-//   [TestClass]
-//  
-//   {
-//     [TestMethod]
-//       //arrange
-//       // act
-//       //assert
-//     }
-//    
-//   }
-// }
+namespace PierresBakery.Tests
+{
+  [TestClass]
+ 
+  {
+    [TestMethod]
+  //arrange
+  // act
+  //assert
+}
+   
+  }
