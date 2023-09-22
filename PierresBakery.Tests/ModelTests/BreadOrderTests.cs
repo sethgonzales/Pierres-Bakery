@@ -13,9 +13,19 @@ namespace PierresBakery.Tests
       //arrange and act
       BreadOrder newBreadOrder = new BreadOrder(1);
       //assert
-      Assert.AreEqual(typeof(BreadOrder), newBreadOrder.GetType{});
+      Assert.AreEqual(typeof(BreadOrder), newBreadOrder.GetType());
     }
-}
+    [TestMethod]
+    public void GetBreadCost_ReturnPriceOfSingleBreadLoaf_Int()
+    {
+      //arrange 
+      
+      //act
+      BreadOrder newBreadOrder = new BreadOrder(1);
+      //assert
+      Assert.AreEqual(typeof(BreadOrder), newBreadOrder.GetType());
+    }
+  }
 
 }
 
