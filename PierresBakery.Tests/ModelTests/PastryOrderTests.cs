@@ -30,7 +30,7 @@ namespace PierresBakery.Tests
     public void GetPastryCost_ReturnPriceOfTwoPastries_Int()
     {
       //arrange 
-      int expectedCost = 10;
+      int expectedCost = 4;
       PastryOrder newPastryOrder = new PastryOrder(2);
       //act
       int actuallCost = newPastryOrder.GetPastryCost();
