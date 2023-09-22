@@ -49,15 +49,4 @@ namespace PierresBakery.Tests
       Assert.AreEqual(expectedCost, theoreticalCost);
     }
   }
-
 }
-
-// ! NOTE:
-// NAME CONVENTION FOR TESTS:
-// [TestMethod]
-// public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
-// {
-//    Arrange
-//    Act
-//    Assert
-// }
